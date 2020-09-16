@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Editor</title>
+  <script>
+    //scripts go here
+    function editStory(){
+      let storyName = document.getElementById("name").value;
+      let story = localStorage.getItem(storyName);
+      document.getElementById("story").value = story;
+    }
+
+    function saveStory(){
+      let storyName = document.getElementById("name").value;
+      let story = document.getElementById("story").value;
+      localStorage.setItem(storyName, story);
+    }
+
+    function displayStory(){
+      let story = document.getElementById("story").value;
+      document.getElementById("story_display").innerHTML = story;
+    }
+  </script>
+  <style>
+    /* styles go here */
+    textarea{
+      width: 800px;
+      height: 250px;
+      background-color: lightcyan;
+    }
+  </style>
+</head>
+<body>
+  <h1>Story Editor</h1>
+  <label for="name">Story Name:</label>
+  <input type="text" id="name">
+  <section>
+    <button onclick="editStory()">Edit</button>
+    <button onclick="saveStory()">Save</button>
+    <button onclick="displayStory()">Display</button>
+  </section>
+  <textarea name="story" id="story" placeholder="Write your awesome story here">
+  </textarea>
+  <section id="story_display"></section>
+</body>
+</html>
