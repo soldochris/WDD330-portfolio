@@ -1,0 +1,97 @@
+*{
+  box-sizing: border-box;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0 .5rem 0;
+}
+
+main .container{
+  width: 40%;
+}
+
+#listTasks{
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: .5rem;
+  margin-bottom: 0;
+  border: 1px solid #888;
+}
+
+#listTasks li{
+  border-bottom: 1px solid #888;
+  padding: 1rem .5rem;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+}
+
+#listTasks li:last-of-type {
+  border-bottom: none;
+}
+
+#listTasks input[type=checkbox]{
+  margin-right: .5rem;
+  justify-self: start;
+  width: 2rem;
+}
+
+#listTasks span {
+  justify-self: start;
+}
+
+#listTasks a{
+  text-decoration: none;
+  color: crimson;
+  justify-self: center;
+}
+
+.footer{
+  border: 1px solid #888;
+  border-top: none;
+  padding: 0;
+  margin: 0 .5rem .5rem .5rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  padding: .5rem 0 ;
+}
+
+.footer a, .footer span{
+  text-decoration: none;
+  padding: .5rem .4rem;
+}
+
+.footer .active{
+  border: 1px solid #888;
+}
+
+.footer a:hover{
+  background-color: #ccc;
+}
+
+#addTaskForm{
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  width: 100%;
+  margin: 1fr .5rem .5rem 1rem;
+  padding: .5rem;
+}
+
+#addTaskForm input[type=text]{
+  width: 100%;
+  height: 2rem;
+}
+
+#addTaskForm input[type=submit] {
+  width: 100%;
+  height: 2rem;
+}

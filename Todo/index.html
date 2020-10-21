@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge one: Todo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Todos</h1>
+    <div class="container"> 
+      <ul id="listTasks">
+        <li><input type="checkbox" id=""><span>hacer tarea</span><a href="#" id="" class="delete">X</a></li>
+        <li><input type="checkbox" id=""><span>hacer ejercicios</span><a href="#" id="" class="delete">X</a></li>
+      </ul>
+      <div class="footer">
+        <span id="remainingTasks">3 tasks left</span>
+        <a href="#" id="allTasks" class="active">All</a>
+        <a href="#" id="activeTasks">Active</a>
+        <a href="#" id="completeTasks">Completed</a>
+      </div>
+    </div>
+    <div class="container">
+      <form id="addTaskForm">
+        <input type="text" id="newTask" placeholder="Add a task">
+        <input type="submit" value="+" id="addTaskBtn">
+      </form>
+    </div>
+  </main>
+  <script src=""></script>
+</body>
+</html>
