@@ -22,7 +22,7 @@ h1 {
 }
 
 main .container{
-  width: 40%;
+  width: 30%;
 }
 
 #listTasks{
@@ -32,7 +32,7 @@ main .container{
   margin: .5rem;
   margin-bottom: 0;
   border: 2px solid #007bff;
-  border-radius: .5rem;
+  border-radius: .5rem .5rem 0 0;
 }
 
 #listTasks li{
@@ -53,6 +53,7 @@ main .container{
   width: 2rem;
   text-decoration: none;
   color: #26a69a;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 }
 
 #listTasks span {
@@ -63,6 +64,7 @@ main .container{
   text-decoration: none;
   color: #dc3545;
   justify-self: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 }
 
 .footer{
@@ -74,26 +76,31 @@ main .container{
   justify-content: space-around;
   font-size: 1.1rem;
   padding: .5rem 0 ;
-  border-radius: .5rem;
+  border-radius: 0 0 .5rem .5rem;
+  background-color: #007bff;
 }
 
 .footer a{
   text-decoration: none;
   padding: .5rem .4rem;
   border-radius: .5rem;
-  color: #17a2b8;
+  color: #fff;
+  background-color: #5cb85c;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
 }
 
 .footer span {
   padding: .5rem .4rem;
+  color: rgba(0, 0, 0, .6);
+  font-size: .9rem;
 }
 
 .footer .active{
-  border: 1px solid #999;
+  background-color: #26a69a;
 }
 
-.footer a:hover{
-  background-color: #ccc;
+.footer a:hover, input[type=submit]:hover {
+  transform: scale(1.15);
 }
 
 #addTaskForm{
@@ -110,16 +117,29 @@ main .container{
   height: 2.5rem;
   border-radius: .5rem;
   border: 2px solid #007bff;
-  box-shadow: 3px 3px 3px #999;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
 }
 
 #addTaskForm input[type=submit] {
   width: 100%;
   height: 2.5rem;
-  background-color: #26a69a;
+  background-color: #5cb85c;
   color: #fff;
   border-radius: .5rem;
   border: none;
   cursor: pointer;
-  box-shadow: 3px 3px 3px #999;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+  font-weight: bold;
+}
+
+.marked{
+  text-decoration: line-through;
+  text-decoration-thickness: .1rem;
+  opacity: .4;
+  text-decoration-color: #555;
+}
+
+.done:hover, .del:hover{
+  transform: scale(1.15);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
 }
