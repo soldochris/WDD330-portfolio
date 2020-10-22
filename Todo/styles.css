@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 *{
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 main{
@@ -25,6 +28,7 @@ main .container{
   margin: .5rem;
   margin-bottom: 0;
   border: 1px solid #888;
+  border-radius: .5rem;
 }
 
 #listTasks li{
@@ -32,6 +36,7 @@ main .container{
   padding: 1rem .5rem;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
+
 }
 
 #listTasks li:last-of-type {
@@ -50,7 +55,7 @@ main .container{
 
 #listTasks a{
   text-decoration: none;
-  color: crimson;
+  color: #dc3545;
   justify-self: center;
 }
 
@@ -63,6 +68,7 @@ main .container{
   justify-content: space-around;
   font-size: 1.1rem;
   padding: .5rem 0 ;
+  border-radius: .5rem;
 }
 
 .footer a, .footer span{
@@ -71,7 +77,8 @@ main .container{
 }
 
 .footer .active{
-  border: 1px solid #888;
+  border: 1px solid #999;
+  border-radius: .5rem;
 }
 
 .footer a:hover{
@@ -84,14 +91,19 @@ main .container{
   width: 100%;
   margin: 1fr .5rem .5rem 1rem;
   padding: .5rem;
+  grid-gap: 1em;
 }
 
 #addTaskForm input[type=text]{
   width: 100%;
   height: 2rem;
+  border-radius: .5rem;
 }
 
 #addTaskForm input[type=submit] {
   width: 100%;
   height: 2rem;
+  background-color: #26a69a;
+  color: #fff;
+  border-radius: .5rem;
 }
