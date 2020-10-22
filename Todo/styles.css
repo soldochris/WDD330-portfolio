@@ -5,6 +5,10 @@
   font-family: 'Lato', sans-serif;
 }
 
+body{
+  background-color: #f8f9fa;
+}
+
 main{
   display: flex;
   flex-direction: column;
@@ -27,12 +31,12 @@ main .container{
   padding: 0;
   margin: .5rem;
   margin-bottom: 0;
-  border: 1px solid #888;
+  border: 2px solid #007bff;
   border-radius: .5rem;
 }
 
 #listTasks li{
-  border-bottom: 1px solid #888;
+  border-bottom: 2px solid #007bff;
   padding: 1rem .5rem;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
@@ -43,24 +47,26 @@ main .container{
   border-bottom: none;
 }
 
-#listTasks input[type=checkbox]{
+#listTasks .done{
   margin-right: .5rem;
   justify-self: start;
   width: 2rem;
+  text-decoration: none;
+  color: #26a69a;
 }
 
 #listTasks span {
   justify-self: start;
 }
 
-#listTasks a{
+#listTasks .del{
   text-decoration: none;
   color: #dc3545;
   justify-self: center;
 }
 
 .footer{
-  border: 1px solid #888;
+  border: 2px solid #007bff;
   border-top: none;
   padding: 0;
   margin: 0 .5rem .5rem .5rem;
@@ -71,14 +77,19 @@ main .container{
   border-radius: .5rem;
 }
 
-.footer a, .footer span{
+.footer a{
   text-decoration: none;
+  padding: .5rem .4rem;
+  border-radius: .5rem;
+  color: #17a2b8;
+}
+
+.footer span {
   padding: .5rem .4rem;
 }
 
 .footer .active{
   border: 1px solid #999;
-  border-radius: .5rem;
 }
 
 .footer a:hover{
@@ -96,14 +107,19 @@ main .container{
 
 #addTaskForm input[type=text]{
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   border-radius: .5rem;
+  border: 2px solid #007bff;
+  box-shadow: 3px 3px 3px #999;
 }
 
 #addTaskForm input[type=submit] {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   background-color: #26a69a;
   color: #fff;
   border-radius: .5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px #999;
 }
