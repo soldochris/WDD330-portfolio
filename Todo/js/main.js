@@ -1,4 +1,4 @@
-/* DOM manipulation helper*/
+/** Constants **/
 const listTasks = document.getElementById('listTasks');
 const remainingTasks = document.getElementById('remainingTasks');
 const allTasks = document.getElementById('allTasks');
@@ -7,11 +7,17 @@ const completedTasks = document.getElementById('completedTasks');
 const addTaskForm = document.getElementById('addTaskForm');
 const newTask = document.getElementById('newTask');
 
+/** Events**/
+addTaskForm.addEventListener('submit', saveTask);
+allTasks.addEventListener('click', getAll);
+activeTasks.addEventListener('click', getActives);
+completedTasks.addEventListener('click', getCompleted);
+
+/** check if are there any info saved **/
 if (localStorage.getItem("toDoList") !== null) {
   getTasks();
 }
 
-addTaskForm.addEventListener('submit', saveTask);
 
 function saveTask(e) {
   const todo = {
@@ -97,16 +103,12 @@ function getRemaining(){
   remainingTasks.innerHTML = `${leftTasks.length} tasks left`;
 }
 
-allTasks.addEventListener('click', getAll);
-
 function getAll(){
   getTasks();
   allTasks.classList.add("active");
   activeTasks.classList.remove("active");
   completedTasks.classList.remove("active");
 }
-
-activeTasks.addEventListener('click', getActives);
 
 function getActives(){
   let actives = JSON.parse(localStorage.getItem('toDoList')).filter(x => x.completed == false);
@@ -126,8 +128,6 @@ function getActives(){
   allTasks.classList.remove("active");
   completedTasks.classList.remove("active");
 }
-
-completedTasks.addEventListener('click', getCompleted);
 
 function getCompleted() {
   let completed = JSON.parse(localStorage.getItem('toDoList')).filter(x => x.completed == true);
