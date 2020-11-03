@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .box{
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: #ff7e67;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+      transition: background-color 2s, transform 2s;
+    }
+
+    .box:hover{
+      background-color: aquamarine;
+      transform: translateX(50px);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Transition</h1>
+    <p>Hover the next box to see an example of transition</p>
+    <div class="box"></div>
+    <br>
+    <a href="index.html" class="back">Back &#8617;</a>
+  </main>
+</body>
+</html>

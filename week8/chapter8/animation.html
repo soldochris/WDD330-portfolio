@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .box{
+      display: block;
+      width: 100px;
+      height: 100px;
+      background: #ff7e67;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+      animation-duration: 7s;
+      animation-name: example;
+      position: relative;
+    }
+
+    @keyframes example {
+      0%   {background-color:slateblue; left:0px; top:0px;}
+      25%  {background-color:steelblue; left:200px; top:0px;}
+      50%  {background-color:burlywood; left:200px; top:200px;}
+      75%  {background-color:greenyellow; left:0px; top:200px;}
+      100% {background-color:orchid; left:0px; top:0px;}
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Animation Example</h1>
+    <br>
+    <div class="box"></div>
+    <br>
+    <a href="index.html" class="back">Back &#8617;</a>
+  </main>
+</body>
+</html>

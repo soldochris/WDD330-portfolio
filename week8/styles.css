@@ -19,7 +19,7 @@ main {
   margin-top: 10%;
   border-radius: .5rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, .3);
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 h1 {
@@ -40,4 +40,15 @@ a:hover {
   align-self: flex-end;
   font-size: .9rem;
   margin-right: 1rem;
+}
+
+ul{
+  padding-left: 0;
+  width: 80%;
+}
+
+h3{
+  align-self: flex-start;
+  margin-left: 1rem;
+  margin-bottom: 0;
 }
