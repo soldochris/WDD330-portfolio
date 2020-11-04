@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .myCanvas {
+      border: dotted 2px #888;
+      margin: 1rem 0;
+      border-radius:5px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Canvas</h1>
+    <p>The following is an example of Canvas</p>
+    <canvas id="myCanvas" class="myCanvas" width="200" height="200">
+      Sorry! Your browser doesn’t support Canvas.
+    </canvas>
+    <a href="index.html" class="back">Back &#8617;</a>
+  </main>
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const context = canvas.getContext("2d");
+    const gradient = context.createLinearGradient(0, 0, 0, 200);
+    context.beginPath();
+    context.arc(100, 100, 50, 0, Math.PI*2, true);
+    context.closePath();
+    gradient.addColorStop(0, "blue"); 
+    gradient.addColorStop(1, "white"); 
+    context.fillStyle = gradient; 
+    context.lineWidth = 3;
+    context.fill(); 
+    context.stroke();
+  </script>
+</body>
+</html>
