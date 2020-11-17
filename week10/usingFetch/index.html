@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Fetch</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    span{
+      color:#006a71;
+      font-weight: bold;
+    }
+    h2, h2 span{
+      color: #333;
+    }
+    #priceUsd:before{
+      content: "$";
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Using Fetch</h1>
+    <div class="output">
+      <h2><span id="coinName"></span> Information:</h2>
+      <p>Symbol: <span id="symbol"></span></span></p>
+      <p>The actual price is: <span id="priceUsd"></span></span></p>
+    </div>
+    <a href="../index.html" class="back">Back &#8617;</a>
+  </main>
+  <script>
+    const url = 'https://api.coinlore.net/api/ticker/?id=90';
+    fetch(url)
+      .then((response) => response.json())
+      .then((jsObject) => {
+        document.getElementById('coinName').innerText = jsObject[0].name;
+        document.getElementById('symbol').innerText = jsObject[0].symbol;
+        document.getElementById('priceUsd').innerText = jsObject[0].price_usd.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    });
+
+  </script>
+</body>
+</html>
