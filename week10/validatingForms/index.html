@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validating Forms</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    main{
+      margin-top: 5%;
+    }
+
+    .example{
+      border: 1px dashed #006a71 ;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: .3rem;
+    }
+
+    label{
+      color: #006a71;
+      font-weight: bold;
+      display: block;
+      margin-bottom: .3rem;
+    }
+
+    input{
+      width: 80%;
+      padding: .3rem;
+      border-radius: .3rem;
+      border: 1px solid #006a71;
+      color:  #333;
+      font-size: 1rem;
+      margin-bottom: .5rem
+    }
+
+    input:invalid:required {
+      background-color: pink;
+    }
+
+    input:required:valid {
+      background-color: lightgreen;
+    }
+
+    button{
+      background-color: lightgreen;
+      padding: .5rem;
+      border-radius: .3rem;
+      color: #006a71;
+      font-weight: bold;
+      border: 1px solid #68b0ab;
+      font-size: 1rem;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    }
+
+    button:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Validating Forms</h1>
+    <form action="#">
+      <div class="example">
+        <p>The following is an example of the required attribute</p>
+        <label for="name">Enter your name</label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="example">
+        <p>The following is an example of validating against a regular expression</p>
+        <label for="question">Would you prefer a pizza or a hamburger?</label>
+        <input type="text" name="question" required pattern="[Pp]izza|[Hh]amburguer">
+      </div>
+      <div class="example">
+        <p>The following is an example of constraining the length of entries</p>
+        <label for="phrase">Enter from 8 to 12 characters</label>
+        <input type="text" name="phrase" minlength="8" maxlength="12" required>
+      </div>
+      <div class="example">
+        <p>The following are examples of constraining the values of your entries</p>
+        <label for="number">What is your favorite number?</label>
+        <input type="number" required>
+        <label for="mail">What is your e-mail adress?</label>
+        <input type="email" name="mail" required>
+      </div>
+      <button>Submit</button>
+    </form>
+    <a href="../index.html" class="back">Back &#8617;</a>
+  </main>
+</body>
+</html>
