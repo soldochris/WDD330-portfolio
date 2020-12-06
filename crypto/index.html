@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto</title>
+  <style>
+    .overviewData, .coinInfo{
+      font-weight: bold;
+    }
+    .overviewData:before{
+      content: ":";
+      margin-left: .3rem;
+    }
+    .card{
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">All Coins</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <div class="Overview">
+      <h3>Overview</h3>
+      <ul>
+        <li>Cryptocurrencies<span id="cryptos" class="overviewData"></span></li>
+        <li>Active Markets<span id="activeMarkets" class="overviewData"></span></li>
+        <li>Market Cap<span id="marketCap" class="overviewData"></span></li>
+        <li>Market Cap<span id="marketCapChange" class="overviewData"></span></li>
+        <li>BTC Dominance<span id="btcDominance" class="overviewData"></span></li>
+        <li>ETH Dominance<span id="ethDominance" class="overviewData"></span></li>
+        <li>Average Price Change<span id="avgPriceChange" class="overviewData"></span></li>
+      </ul>
+    </div>
+    <h1>Top 10 cryptocurrencies</h1>
+    <div id="topCoins"></div>
+    <a href="#">Show all coins</a>
+  </main>
+  <footer>
+    <p>Christian Soldevilla</p>
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">All Coins</a>
+      </li>
+    </ul>
+    <p>BYUI-WDD330</p>
+  </footer>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
