@@ -1,4 +1,4 @@
-import * as Api from "/crypto/js/api.js";
+import * as Api from "./api.js";
 
 Api.showGoblobalResume();
 Api.showTop10Coins();
