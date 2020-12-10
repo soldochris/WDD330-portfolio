@@ -9,3 +9,5 @@ const avgPriceChange = document.getElementById("avgPriceChange");
 
 //selecting DOM of top10
 const topCoins = document.getElementById("topCoins");
+
+export {cryptos,activeMarkets,marketCap,marketCapChange,btcDominance,ethDominance,avgPriceChange, topCoins}
